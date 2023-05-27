@@ -1,0 +1,84 @@
+.field {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 630px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+    margin: 0;
+  }
+}
+
+.field__label {
+  margin-right: 6px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 18px;
+  }
+}
+
+.field__form {
+  padding: 13px 15px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  border: 1px solid @border-color-grey;
+  flex-grow: 1;
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+    padding: 13px 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 13px 18px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    outline: 1px solid #cdcdcd;
+  }
+
+  &:focus-within {
+    outline: 1px solid @special_dark-grey;
+  }
+
+  &:focus:invalid {
+    outline: 1px solid #ff8282;
+  }
+}
+
+.field__icon {
+  position: absolute;
+  content: "";
+  color: @special_dark-grey-2;
+  right: 18px;
+}
+
+.field__icon:hover {
+  color: @color-green;
+}
+
+.field__icon:focus:invalid {
+  color: #ff8282;
+}
+
+.field__form:hover + .field__icon {
+  color: @color-green;
+}
+
+.field__form:focus:invalid + .field__icon {
+  color: #ff8282;
+}

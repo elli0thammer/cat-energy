@@ -1,0 +1,73 @@
+.special-gift {
+  background-image:
+    linear-gradient(rgba(@background-green, 0.85), rgba(@background-green, 0.85)),
+    url("../img/background/gift-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    background-image:
+      linear-gradient(rgba(@background-green, 0.85), rgba(@background-green, 0.85)),
+      url("../img/background/gift-tablet.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image:
+      linear-gradient(rgba(@background-green, 0.85), rgba(@background-green, 0.85)),
+      url("../img/background/gift-desktop.jpg");
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  background-image: linear-gradient(rgba(@background-green, 0.85), rgba(@background-green, 0.85)), url("../img/background/gift-mobile@2x.jpg");
+
+  @media (min-width: @tablet-width) {
+    background-image: linear-gradient(rgba(@background-green, 0.85), rgba(@background-green, 0.85)), url("../img/background/gift-tablet@2x.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: linear-gradient(rgba(@background-green, 0.85), rgba(@background-green, 0.85)), url("../img/background/gift-desktop@2x.jpg");
+  }
+}
+
+.special-gift__wrapper {
+  background: no-repeat 101px 58px url("../img/gift.svg");
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    width: 707px;
+    margin-bottom: 76px;
+    background-position: 76px 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    margin: 0;
+    background-position: 82px 55px;
+  }
+}
+
+.special-gift__description {
+  font-size: 16px;
+  line-height: 20px;
+  color: @color-white;
+
+  padding-top: 186px;
+  padding-bottom: 43px;
+  margin: 0;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 71px;
+    padding-bottom: 69px;
+    padding-left: 422px;
+    text-align: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    padding: 184px 42px 42px;
+  }
+}

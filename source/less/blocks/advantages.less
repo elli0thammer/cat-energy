@@ -1,0 +1,151 @@
+.advantages {
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
+}
+
+.advantages__wrapper {
+  margin-bottom: 47px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 42px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 32px;
+  }
+}
+
+.advantages__title--secondary {
+  color: @color-black;
+  line-height: 40px;
+}
+
+.advantages__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 280px;
+  counter-reset: program-counter;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 230px 230px;
+    gap: 37px 153px;
+    width: 629px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1220px;
+    gap: 0;
+  }
+}
+
+.advantages__item br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.advantages__description {
+  width: 200px;
+  margin: 0;
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 250px;
+  }
+}
+
+.advantages__item::after {
+  @media (min-width: @tablet-width) {
+    font-family: "Oswald", sans-serif;
+    width: 112px;
+    content: counter(program-counter);
+    position: absolute;
+    font-size: 280px;
+    color: @color-grey;
+    z-index: -1;
+    top: 130px;
+    left: 120px;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  counter-increment: program-counter;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    min-height: 280px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
+}
+
+.advantages__item:not(:last-child) {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 20px;
+  }
+}
+
+.advantages__block {
+  background-color: @color-green;
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    margin-top: 51px;
+    margin-bottom: 31px;
+  }
+}
+
+.advantages__block--one {
+  background-image: url("../img/leaf.svg");
+}
+
+.advantages__block--two {
+  background-image: url("../img/water.svg");
+}
+
+.advantages__block--three {
+  background-image: url("../img/food.svg");
+}
+
+.advantages__block--four {
+  background-image: url("../img/watch.svg");
+}
